@@ -1,0 +1,48 @@
+{% extends "./base.html" %}
+{% block title %}Pagos{% endblock %}
+
+{% block body %}
+
+
+<div class="text-center mb-4">
+    <h1 class="animate__animated animate__pulse animate__infinite"
+        style="font-family: 'Comic Sans MS', sans-serif;">
+        PAGOS
+    </h1>
+</div>
+<div class="card shadow">
+    <div class="card-header bg-dark text-white">
+        <h4 class="mb-0">Listado de Pagos</h4>
+    </div>
+<a href="{% url 'pagosCreate' %}" class="btn btn-success mb-3">
+    Nuevo Pago
+</a>
+
+<table class="table table-striped text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Numero</th>
+            <th>Pasajero</th>
+            <th>Tarjeta</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for p in pagos %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ p.numero }}</td>
+            <td>{{ p.viaje.pasajero.nombre }}</td>
+            <td>{{ p.tarjeta.codigo }}</td>
+            <td>
+                <a href="{% url 'pagosEdit' p.id %}" class="btn btn-info btn-sm">Editar</a>
+                <a href="{% url 'pagosDelete' p.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

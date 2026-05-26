@@ -1,0 +1,18 @@
+{% extends "./base.html" %}
+
+{% block body %}
+
+<h2 class="text-center mb-4">Formulario</h2>
+
+<form method="POST" enctype="multipart/form-data" class="card p-4 shadow">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <div class="text-center">
+        <a href="javascript:history.back()" class="btn btn-secondary">Cancelar</a>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "./base.html" %}
+{% block title %}Tarjetas{% endblock %}
+
+{% block body %}
+
+<div class="text-center mb-4">
+    <h1 class="animate__animated animate__pulse animate__infinite"
+        style="font-family: 'Comic Sans MS', sans-serif;">
+        TARJETAS
+    </h1>
+</div>
+
+<div class="card shadow">
+    <div class="card-header bg-dark text-white">
+        <h4 class="mb-0">Listado de Tarjetas</h4>
+    </div>
+<a href="{% url 'tarjetasCreate' %}" class="btn btn-success mb-3">
+    Nueva Tarjeta
+</a>
+
+<table class="table table-striped text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Codigo</th>
+            <th>Monto</th>
+            <th>Pasajero</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for t in tarjetas %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ t.codigo }}</td>
+            <td>{{ t.monto }}</td>
+            <td>{{ t.idPasajero.nombre }}</td>
+            <td>
+                <a href="{% url 'tarjetasEdit' t.id %}" class="btn btn-info btn-sm">Editar</a>
+                <a href="{% url 'tarjetasDelete' t.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}
