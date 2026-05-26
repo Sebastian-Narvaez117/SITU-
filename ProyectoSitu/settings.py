@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e$5&*94q(tb$(ko4s&hd3_g7s%*&-^wit6*d)6zt3gov#0$uo@
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "djangositu-bacsh3bfguaqgfbr.centralus-01.azurewebsites.net",
+   "*",
 ]
 
 # Application definition
