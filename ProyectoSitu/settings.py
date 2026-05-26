@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-e$5&*94q(tb$(ko4s&hd3_g7s%*&-^wit6*d)6zt3gov#0$uo@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['situ-loja-dgb8awhgcahaebev.eastus-01.azurewebsites.net']
+ALLOWED_HOSTS = ['djangosituloja-dgc3b0fecmdugyde.eastus-01.azurewebsites.net']
 
 
 # Application definition
@@ -52,7 +52,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://djangositu-bacsh3bfguaqgfbr.centralus-01.azurewebsites.net",
+    "https://djangosituloja-dgc3b0fecmdugyde.eastus-01.azurewebsites.net",
 ]
 
 ROOT_URLCONF = 'ProyectoSitu.urls'
