@@ -209,3 +209,226 @@ background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, F
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
+
+/* ========================== */
+/* ESTILOS MEJORADOS PARA TABLAS - DISEÑO MODERNO */
+/* ========================== */
+
+.table {
+	border-collapse: separate !important;
+	border-spacing: 0 !important;
+	border-radius: 16px !important;
+	overflow: hidden !important;
+	background: white !important;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
+	margin-bottom: 2rem !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.table thead {
+	background: linear-gradient(90deg, #ff6b35 0%, #f7931e 50%, #ffc300 100%) !important;
+	color: white !important;
+	font-weight: 700 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 1.5px !important;
+	font-size: 0.9rem !important;
+}
+
+.table thead th {
+	padding: 20px 18px !important;
+	border: none !important;
+	text-align: center !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.table thead th:first-child {
+	border-radius: 16px 0 0 0 !important;
+}
+
+.table thead th:last-child {
+	border-radius: 0 16px 0 0 !important;
+}
+
+.table tbody tr {
+	border-bottom: 2px solid #f0f0f0 !important;
+	transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+	background-color: white !important;
+}
+
+.table tbody tr:nth-child(odd) {
+	background-color: #fffbf5 !important;
+}
+
+.table tbody tr:nth-child(even) {
+	background-color: #ffffff !important;
+}
+
+.table tbody tr:hover {
+	background: linear-gradient(90deg, #ffe5d4 0%, #fff8e7 100%) !important;
+	transform: translateY(-3px) !important;
+	box-shadow: 0 8px 20px rgba(255, 107, 53, 0.25) !important;
+}
+
+.table tbody td {
+	padding: 18px 18px !important;
+	border: none !important;
+	text-align: center !important;
+	vertical-align: middle !important;
+	color: #2c3e50 !important;
+	font-size: 0.98rem !important;
+}
+
+.table tbody td:first-child {
+	font-weight: 700 !important;
+	color: #ff6b35 !important;
+}
+
+.table tbody tr:last-child td {
+	border-bottom: none !important;
+}
+
+/* Estilos para imágenes en tablas */
+.table tbody td img {
+	border-radius: 10px !important;
+	border: 3px solid #ff6b35 !important;
+	transition: all 0.3s ease !important;
+	object-fit: cover !important;
+	box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2) !important;
+}
+
+.table tbody td img:hover {
+	transform: scale(1.15) rotate(2deg) !important;
+	box-shadow: 0 8px 20px rgba(255, 107, 53, 0.5) !important;
+	border-color: #d946a6 !important;
+}
+
+/* Estilos para botones en tablas */
+.table .btn-sm {
+	padding: 8px 14px !important;
+	font-size: 0.8rem !important;
+	font-weight: 700 !important;
+	border-radius: 8px !important;
+	border: none !important;
+	transition: all 0.3s ease !important;
+	cursor: pointer !important;
+	margin: 0 3px !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.7px !important;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.table .btn-info {
+	background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%) !important;
+	color: white !important;
+}
+
+.table .btn-info:hover {
+	transform: translateY(-3px) scale(1.05) !important;
+	box-shadow: 0 8px 20px rgba(168, 85, 247, 0.5) !important;
+	color: white !important;
+}
+
+.table .btn-danger {
+	background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%) !important;
+	color: white !important;
+}
+
+.table .btn-danger:hover {
+	transform: translateY(-3px) scale(1.05) !important;
+	box-shadow: 0 8px 20px rgba(220, 38, 38, 0.5) !important;
+	color: white !important;
+}
+
+.table .btn-success {
+	background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%) !important;
+	color: white !important;
+	font-weight: 700 !important;
+	padding: 12px 24px !important;
+	border-radius: 10px !important;
+	margin-bottom: 15px !important;
+	display: inline-block !important;
+	box-shadow: 0 6px 15px rgba(255, 107, 53, 0.3) !important;
+}
+
+.table .btn-success:hover {
+	transform: translateY(-3px) scale(1.05) !important;
+	box-shadow: 0 10px 25px rgba(255, 107, 53, 0.5) !important;
+	color: white !important;
+}
+
+/* Responsive para tablas */
+.table-responsive {
+	border-radius: 16px !important;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Mensaje cuando no hay datos */
+.table tbody tr td[colspan] {
+	background: linear-gradient(90deg, #fffbf5 0%, #fff8e7 100%) !important;
+	color: #ff6b35 !important;
+	font-weight: 700 !important;
+	padding: 35px !important;
+	font-size: 1.15rem !important;
+	letter-spacing: 0.5px !important;
+}
+
+/* Animación de carga para filas */
+@keyframes slideInRow {
+	from {
+		opacity: 0;
+		transform: translateY(15px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.table tbody tr {
+	animation: slideInRow 0.5s ease-out !important;
+}
+
+.table tbody tr:nth-child(1) { animation-delay: 0.05s !important; }
+.table tbody tr:nth-child(2) { animation-delay: 0.1s !important; }
+.table tbody tr:nth-child(3) { animation-delay: 0.15s !important; }
+.table tbody tr:nth-child(4) { animation-delay: 0.2s !important; }
+.table tbody tr:nth-child(5) { animation-delay: 0.25s !important; }
+.table tbody tr:nth-child(n+6) { animation-delay: 0.3s !important; }
+
+/* Mejorar card header */
+.card-header {
+	background: linear-gradient(90deg, #ff6b35 0%, #f7931e 50%, #ffc300 100%) !important;
+	border: none !important;
+	border-radius: 16px 16px 0 0 !important;
+	padding: 24px !important;
+	box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2) !important;
+}
+
+.card-header h4 {
+	color: white !important;
+	font-weight: 700 !important;
+	letter-spacing: 1.2px !important;
+	margin: 0 !important;
+	text-transform: uppercase !important;
+	font-size: 1.3rem !important;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Mejorar card */
+.card {
+	border: none !important;
+	border-radius: 16px !important;
+	overflow: hidden !important;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+	background: white !important;
+}
+
+.card:hover {
+	box-shadow: 0 20px 50px rgba(255, 107, 53, 0.25) !important;
+	transform: translateY(-4px) !important;
+}
+
+.card-body {
+	padding: 30px !important;
+}
